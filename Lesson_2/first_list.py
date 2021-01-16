@@ -17,4 +17,4 @@ maze_length = len(maze)
 for j in range(0, maze_length):
     print(f"{j} элемент {maze[j]} имеет тип: {type(maze[j])}")
 
-# add any text
+#jhgjhgjhg
