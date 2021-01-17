@@ -7,14 +7,8 @@
 
 maze = [1, 2, "Freddy's", "coming", "for", "you!", True, 9.99]
 
-# n = int(input("Введи количество элементов списка: "))
-# for i in range(0, n):
-#     element = input(f"{i} элемент: ")
-#     maze.append(element)
-# print(f"Ваш список: {maze}")
-
 maze_length = len(maze)
 for j in range(0, maze_length):
     print(f"{j} элемент {maze[j]} имеет тип: {type(maze[j])}")
 
-#jhgjhgjhg
+# работает

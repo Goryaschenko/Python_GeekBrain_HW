@@ -7,11 +7,20 @@
 """
 
 maze = []
-
 n = int(input("Введи количество элементов списка: "))
 for i in range(0, n):
     element = input(f"{i} элемент: ")
     maze.append(element)
 print(f"Ваш список: {maze}")
 
-#Any text/
+i = 0
+while i < n-1:
+    maze[i], maze[i+1] = maze[i+1], maze[i]
+    i += 2
+print(f"А теперь обменяем попарно элементы списка местами при помощи while: {maze}")
+
+for i in range(1, len(maze), 2):
+    maze[i-1], maze[i] = maze[i], maze[i-1]
+print(f"А теперь обменяем их обратно при помощи for: {maze}")
+# AnSy text/
+
