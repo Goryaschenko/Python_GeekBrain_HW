@@ -22,29 +22,28 @@
 product_dict = {'Название товара': None,
                 'Цена': None,
                 'Количетсво': None,
-                'Единицы измерений': None} # словарь
+                'Единицы измерений': None}  # словарь
+analytics = {'Название товара': [],
+             'Цена': [],
+             'Количетсво': [],
+             'Единицы измерений': []}
+
+value = None
+
 num_of_entry = 1
-products = [] # список
+products = []  # список
 
 while True:
-    continue_check = input("Continue: ")
-    if continue_check == 'No':
+    continue_check = input("Continue yes/no: ").lower()
+    if continue_check == 'no':
+        print("Аналитика")
+        for x, y in analytics.items():
+            print(x, y)
         break
-    product_dict['Название товара'] = input("Введи название товара")
-    product_dict['Цена'] = input("Введи цену")
-    product_dict['Количетсво'] = input("Введи количество")
-    product_dict['Единицы измерений'] = input("Введи единицы измерения количества")
-    products.append(tuple([num_of_entry, product_dict.copy()]))  # список с кортежами
-    num_of_entry += 1
 
-analytics = {'Название товара': None,
-            'Цена': None,
-            'Количетсво': None,
-            'Единицы измерений': None
-             }
-for el in product_dict:
-    analytics['Название товара'] =
-
-print(products)
-#[[1, {'Название товара': '1', 'Цена': '2', 'Количетсво': '3', 'Единицы измерений': '4'}], [2, {'Название товара': '5', 'Цена': '6', 'Количетсво': '7', 'Единицы измерений': '4'}]]
-
+    for key in product_dict.keys():
+        value = input(f"Введи {key}: ")
+        product_dict[key] = value
+        products.append((num_of_entry, product_dict))
+        analytics[key].append(product_dict[key])
+        num_of_entry += 1
