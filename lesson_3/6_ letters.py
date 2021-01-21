@@ -18,14 +18,31 @@ def int_func(words):
     return words
 
 
-#### ОДНО СЛОВО ####
-# text = input("Введи слово: ")
+# #### ОДНО СЛОВО ####
+# # text = input("Введи слово: ")
+# # print(int_func(text))
+#
+# #### НЕСКОЛЬКО СЛОВ ####
+# text = list(map(str, input().split()))
+# text = " ".join(text)
 # print(int_func(text))
-
-#### НЕСКОЛЬКО СЛОВ ####
-text = list(map(str, input().split()))
-text = " ".join(text)
-print(int_func(text))
 
 
 ###Решение азадния со * ####
+
+def ord_func(words):
+    result = list()
+    for word in words:
+        first = ord(word[0])
+        if first >= 97:
+            first -= 32
+        rep = chr(first)
+        pre_result = rep + word[1:]
+        result.append(pre_result)
+    return " ".join(result)
+
+
+
+
+text = list(map(str, input().split()))
+print(ord_func(words=text))
