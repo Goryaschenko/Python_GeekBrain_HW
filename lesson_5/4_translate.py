@@ -25,3 +25,5 @@ with open("4.1_translate.txt", "r", encoding='utf-8') as f:
 
 with open("4.2_translate.txt", "w", encoding='utf-8') as f:
     f.write(result.text)
+
+# Google must have

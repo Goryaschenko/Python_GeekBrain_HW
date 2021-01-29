@@ -21,3 +21,5 @@ with open("1_empty_string.txt", "a+", encoding='utf-8') as f:
 with open("1_empty_string.txt", "r", encoding='utf-8') as f:
     data = f.read()
     print(data)
+
+#готово

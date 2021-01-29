@@ -17,8 +17,10 @@ with open("3_salary.txt", "r", encoding='utf-8') as f:
     sum_sal = 0
     for i in data:
         i = i.split()
-        print(i) # ['Иванов 15000'] ['Петров 20000'] ['Сидоров 35000'] ['Чижиков 5000']
+        print(i)  # ['Иванов 15000'] ['Петров 20000'] ['Сидоров 35000'] ['Чижиков 5000']
         if int(i[1]) < 20000:
             min_sal.append(i[0])  # ['Иванов', 'Чижиков']
         sum_sal += int(i[1])
-    print(f"Средняя сумма окладов = {sum_sal/len(data)} , меньше 20 тыс. получают: {min_sal}")
+    print(f"Средняя сумма окладов = {sum_sal / len(data)} , меньше 20 тыс. получают: {min_sal}")
+
+# готово

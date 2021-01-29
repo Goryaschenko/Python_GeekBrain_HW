@@ -26,6 +26,7 @@ with open("7_firms.txt", "r", encoding='utf-8') as f:
     aver_dict = {"average_profit": 0}
     result_list = []
 
+### собираем списки только из чисел ####
     for elements in data:
         element = elements.split()
         str_el = str(element)
@@ -34,17 +35,18 @@ with open("7_firms.txt", "r", encoding='utf-8') as f:
         sub = int(new_data[0])
         for i, n in enumerate(new_data):
             if i < (len(new_data) - 1):
-                sub = sub - int(new_data[i + 1])
-        print(sub)
-        if sub > 0:
+                sub = sub - int(new_data[i + 1])  # считаем убыточность
+        if sub > 0:  # если фирма убыточна то в словарь не попадает
             firms_dict.update({element[0]: sub})
 
+#### Соединяем все в один список ####
     print(firms_dict)
-    firms_aver = sum(firms_dict.values()) / len(firms_dict)
+    firms_aver = sum(firms_dict.values()) / len(firms_dict)  # считаем среднее
     aver_dict["average_profit"] = firms_aver
     result_list.append(firms_dict)
     result_list.append(aver_dict)
+    print(result_list)
 
-with open("7_firms.json", "w") as f:
+with open("7_firms_j.json", "w") as f:
     json.dump(result_list, f)
 

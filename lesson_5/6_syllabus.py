@@ -21,6 +21,7 @@ with open("6_syllabus.txt", "r", encoding='utf-8') as f:
     new_dict = {}
     new_list = []
 
+#### собираем списко только из чисел ####
     for elements in data:
         element = elements.split()
         str_el = str(element)
