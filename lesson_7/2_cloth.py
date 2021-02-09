@@ -56,3 +56,7 @@ print(costume_1.consumption)
 print(coat_1.consumption)
 print(coat_1.full_consum)
 print(costume_1.full_consum)
+
+"""
+Реализовать возможность изменять размеры одежды
+"""

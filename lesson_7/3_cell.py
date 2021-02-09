@@ -72,3 +72,7 @@ print(cells_1 / cells_2)
 print(cells_1 + cells_2)
 print(cells_1 - cells_2)
 print(cells_2 - cells_1)
+
+"""
+Реализовать итоговый вывод данных в формате print(cells_2.make_order(cells_1 * cells_2))
+"""

@@ -14,6 +14,10 @@
 import numpy as np
 
 
+class Mismatched_matrices(Exception):
+    pass
+
+
 class Matrix:
     def __init__(self, my_list):
         self.list = my_list
@@ -21,6 +25,8 @@ class Matrix:
     def __add__(self, other):
         a = np.array(self.list)
         b = np.array(other.list)
+        if len(a) != len(b):
+            raise Mismatched_matrices("Размерности матриц должны совпадать")
         n = a + b
         return n
 
@@ -39,3 +45,6 @@ maze_2 = Matrix([[5, 8, 10],
 maze_sum = maze_2 + maze_1
 print(Matrix(maze_sum))
 
+"""
+Реализовать приведение меньшей матрицы к размерности большей матрицы.
+"""
