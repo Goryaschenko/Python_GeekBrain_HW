@@ -28,7 +28,9 @@ class Matrix:
         if len(a) != len(b):
             raise Mismatched_matrices("Размерности матриц должны совпадать")
         n = a + b
-        return n
+        b = n.tolist()
+        print(type(b))
+        return b
 
     def __str__(self):
         return str('\n'.join(['\t'.join([str(j) for j in i]) for i in self.list]))
